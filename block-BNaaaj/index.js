@@ -8,6 +8,10 @@ console.log('welcome to Nodejs');
 // - require os module
 var http = require('http');
 
+var { readFile, unlink } = require('fs');
+
+console.log(readFile, unlink);
+
 // - write code to get `number of cpu's, free memory, uptime and version from os module`
 
 // - write code to require only readFile and unlink method from fs module.
