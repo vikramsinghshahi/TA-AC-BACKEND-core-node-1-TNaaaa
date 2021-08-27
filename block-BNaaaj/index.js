@@ -28,6 +28,20 @@ console.log(readFile, unlink);
 
 // Q. Write code example to demonstrate blocking and non-blocking code.
 
+var buffer1 = Buffer.alloc(10);
+var buffer2 = Buffer.allocUnsafe(20);
+
+buffer1.write('hello world');
+console.log(buffer1.toString());
+
+var { readFile, readFileSync, unlink } = require('fs');
+
+var sync = readFileSync('./app.js');
+
+readFile('./app.js', (err, content) => {
+  console.log(err, content.toString());
+});
+
 // #### http protocol
 
 // Q. In server.js
